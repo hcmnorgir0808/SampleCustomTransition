@@ -14,6 +14,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func didTapTransitionButton(_ sender: Any) {
+        let vc = UIStoryboard(name: "SecondViewController", bundle: nil).instantiateInitialViewController() as! SecondViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
 }
-
